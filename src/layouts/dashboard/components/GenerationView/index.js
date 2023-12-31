@@ -7,6 +7,7 @@ import scanMeQR from './scan-me-ai.png';
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 import VuiInput from "components/VuiInput";
+import VuiButton from "components/VuiButton";
 
 // React icons
 import { BsCheckCircleFill } from "react-icons/bs";
@@ -23,6 +24,7 @@ import AdobeXD from "examples/Icons/AdobeXD";
 // Vision UI Dashboard theme imports
 import palette from "assets/theme/base/colors";
 const containerStyle = {
+  marginTop: '50px',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -49,6 +51,15 @@ const promptTextFieldStyle = {
   position: 'relative' // Use 'fixed' or 'absolute' if you want to position it relative to the viewport
 };
 
+const generateButtonStyle = {
+  marginTop: '50px',
+  marginBottom: '50px',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100%', // For full height of the parent, or use '100vh' for full viewport height
+  width: '50%', // For full width of the parent, or use '100vw' for full viewport width
+  position: 'relative' // Use 'fixed' or 'absolute' if you want to position it relative to the viewport
+};
 
 function GenerationView() {
   return (
@@ -67,7 +78,11 @@ function GenerationView() {
             icon={{ component: "lightbulb", direction: "left" }}
           />  
         </div>
-            
+        <div style={generateButtonStyle}>
+          <VuiButton color="info" fullWidth>
+            Generate
+          </VuiButton>
+        </div>
 
         {/* <VuiTypography variant="lg" fontWeight="bold" mb="5px" color="white">
           Orders overview
