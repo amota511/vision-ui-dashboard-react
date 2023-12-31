@@ -41,6 +41,7 @@ import colors from "assets/theme/base/colors";
 import WelcomeMark from "layouts/dashboard/components/WelcomeMark";
 import Projects from "layouts/dashboard/components/Projects";
 import OrderOverview from "layouts/dashboard/components/OrderOverview";
+import GenerationView from "layouts/dashboard/components/GenerationView";
 import SatisfactionRate from "layouts/dashboard/components/SatisfactionRate";
 import ReferralTracking from "layouts/dashboard/components/ReferralTracking";
 
@@ -107,20 +108,20 @@ function Dashboard() {
         <VuiBox mb={3}>
           <Grid container spacing="18px">
             <Grid item xs={12} lg={12} xl={5}>
-              <WelcomeMark />
+              {/* <WelcomeMark /> */}
             </Grid>
             <Grid item xs={12} lg={6} xl={3}>
-              <SatisfactionRate />
+              {/* <SatisfactionRate /> */}
             </Grid>
             <Grid item xs={12} lg={6} xl={4}>
-              <ReferralTracking />
+              {/* <ReferralTracking /> */}
             </Grid>
           </Grid>
         </VuiBox>
         <VuiBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={6} xl={7}>
-              <Card>
+              {/* <Card>
                 <VuiBox sx={{ height: "100%" }}>
                   <VuiTypography variant="lg" color="white" fontWeight="bold" mb="5px">
                     Sales Overview
@@ -138,12 +139,12 @@ function Dashboard() {
                       lineChartData={lineChartDataDashboard}
                       lineChartOptions={lineChartOptionsDashboard}
                     />
-                  </VuiBox>
+                  </VuiBox> 
                 </VuiBox>
-              </Card>
+              </Card>*/}
             </Grid>
             <Grid item xs={12} lg={6} xl={5}>
-              <Card>
+              {/*<Card>
                 <VuiBox>
                   <VuiBox
                     mb="24px"
@@ -272,18 +273,23 @@ function Dashboard() {
                     </Grid>
                   </Grid>
                 </VuiBox>
-              </Card>
+              </Card>*/}
             </Grid>
           </Grid>
         </VuiBox>
         <Grid container spacing={3} direction="row" justifyContent="center" alignItems="stretch">
           <Grid item xs={12} md={6} lg={8}>
-            <Projects />
+            {/* <Projects /> */}
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
-            <OrderOverview />
+            {/* <OrderOverview /> */}
           </Grid>
         </Grid>
+        <VuiBox>
+          <Grid item xs={12} lg={6} xl={5}>
+            <GenerationView />
+          </Grid>
+        </VuiBox>
       </VuiBox>
       <Footer />
     </DashboardLayout>
